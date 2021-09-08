@@ -1,2 +1,2 @@
-FROM confluentinc/cp-server:5.4.0
+FROM confluentinc/cp-server
 
