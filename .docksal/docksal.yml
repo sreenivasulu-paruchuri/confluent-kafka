@@ -2,7 +2,8 @@ version: "2.1"
 
 services:
   zookeeper:
-    image: confluentinc/cp-zookeeper:5.4.0
+    image: confluentinc/cp-zookeeper
+    restart: always
     hostname: zookeeper
     container_name: zookeeper
     ports:
@@ -40,7 +41,7 @@ services:
       - ${DOCKSAL_DNS2}
 
   web:
-    image: confluentinc/cp-enterprise-control-center:5.4.0
+    image: confluentinc/cp-enterprise-control-center
     hostname: control-center
     container_name: control-center
     depends_on:
@@ -68,7 +69,7 @@ services:
       - ${DOCKSAL_DNS2}
 
   rest-proxy:
-    image: confluentinc/cp-kafka-rest:5.4.0
+    image: confluentinc/cp-kafka-rest
     depends_on:
       - zookeeper
       - broker

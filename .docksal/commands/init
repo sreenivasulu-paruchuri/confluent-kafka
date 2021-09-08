@@ -5,3 +5,4 @@ fin project start
 fin docker exec -it broker kafka-topics --bootstrap-server 127.0.0.1:9092 --create --topic user_activities --partitions 6 --replication-factor 1 || true
 fin docker exec -it broker kafka-topics --bootstrap-server 127.0.0.1:9092 --create --topic user_achievements --partitions 6 --replication-factor 1 || true
 fin docker exec -it broker kafka-topics --bootstrap-server 127.0.0.1:9092 --create --topic entities_metadata --partitions 6 --replication-factor 1 || true
+fin docker exec -it broker kafka-topics --bootstrap-server 127.0.0.1:9092 --create --topic user_management_updates --partitions 6 --replication-factor 1 || true
